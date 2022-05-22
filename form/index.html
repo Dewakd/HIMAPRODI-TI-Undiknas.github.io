@@ -1,12 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
+  <title>HIMAPRODI TI Undiknas</title>
+  <link rel="shortcut icon" type="image/jpg" href="../img/logo.png"/>
+</head>
+
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="../index.html">
+            <img src="../img/logo.png" alt="logo">
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="../index.html" data-after="Home">Home</a></li>
+            <li><a href="../struktur/index.html" data-after="Service">Struktur Organisasi</a></li>
+            <li><a href="#projects" data-after="Projects">Proker</a></li>
+            <li><a href="../index.html" data-after="About">About</a></li>
+            <li><a href="#footer" data-after="Contact">Contact</a></li>
+          </ul>  
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Section  -->
+  <section id="hero" style="background-image: url(../img/berhati.JPG);">
+    <div class="hero container">
+      <div>
+        <h1>Registration Form<span></span></h1>
+        <h1>HIMAPRODI<span></span></h1>
+        <h1>Teknologi Informasi <span></span></h1>
+        <!-- <a href="form/index.html" type="button" class="cta">Join Us !</a> -->
+      </div>
+      <div class="right-logo">
+        <img src="../img/logo.png" alt="logo">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FORM Section -->
+  <section id="projects">
+    <div class="projects container">
+      <div class="projects-header">
+        <h1 class="section-title">Program <span>Kerja</span></h1>
+      </div>
+    
+      <div class="wrapper">
+        <div class="title">
+          Registration Form
+        </div>
+
+        <form name="hima-login-form" class="form">
+           <div class="inputfield">
+              <label for="nama">Nama Lengkap</label>
+              <input type="text" class="input" id="nama" name="nama">
+           </div> 
+           <div class="inputfield">
+              <label for="nim">NIM</label>
+              <input type="text" class="input" id="nim" name="nim">
+           </div>  
+            <div class="inputfield">
+              <label for="fakultas">Fakultas</label>
+              <input type="text" class="input" id="fakultas" name="fakultas">
+           </div>  
+           <div class="inputfield">
+              <label for="jurusan">Jurusan</label>
+              <input type="text" class="input" id="jurusan" name="jurusan">
+           </div>  
+            <div class="inputfield">
+              <label>Jenis Kelamin</label>
+              <div class="custom_select">
+                <select name="jenis kelamin">
+                  <option value="">Pilih</option>
+                  <option value="Laki-laki">Laki-laki</option>
+                  <option value="Perempuan">Perempuan</option>
+                </select>
+              </div>
+           </div> 
+            <div class="inputfield">
+              <label for="email">Email</label>
+              <input type="text" class="input" id="email" name="email">
+           </div> 
+          <div class="inputfield">
+              <label for="no wa">No WA</label>
+              <input type="text" class="input" id="no wa" name="no wa">
+           </div> 
+          <div class="inputfield">
+              <label for="id line">ID LINE</label>
+              <input type="text" class="input" id="id line" name="id line">
+           </div> 
+          <div class="inputfield">
+              <label name="alamat">Alamat</label>
+              <textarea class="textarea" name="alamat"></textarea>
+           </div> 
+          <div class="inputfield">
+            <input type="submit" value="Register" class="btn">
+          </div>
+
+        </form>
+    </div>	
+    </div>
+  </section>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbweZn6Mj57Fdir9BdeKDHtNfRTG5qBHitJMU5aCjHYHxT1kgUsqb275TWd0gA4wOkUm_g/exec'
+    const form = document.forms['hima-login-form']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          alert("Berhasil");
+          form.reset();
+          console.log('Success!', response)})
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Registration Form</title>
 	<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
-<!-- <body>
+<body>
   <section id="header">
     <div class="header container">
       <div class="nav-bar">
@@ -30,7 +168,7 @@
       </div>
     </div>
   </section>
-<div id="hero"> -->
+<div id="hero">
 <div class="wrapper">
     <div class="title">
       Registration Form
@@ -92,4 +230,4 @@
 </div>	
 </div>
 </body>
-</html>
+</html> -->
