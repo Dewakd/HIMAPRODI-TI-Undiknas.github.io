@@ -58,7 +58,7 @@ p {
 	font-size: 2rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
-	margin-top: 30px;
+	margin-top: 50px;
 	transition: 0.3s ease;
 	transition-property: background-color, color;
 }
@@ -270,7 +270,7 @@ p {
 }
 #hero h1 {
 	display: block;
-	width: fit-content;
+	/* width: fit-content;\ */
 	font-size: 5rem !important;
 	position: relative;
 	color: transparent;
@@ -1003,6 +1003,7 @@ p {
 
 .card {
 	margin: 5px;
+	margin-bottom: -27px;
     position: relative;
     width: 200px;
     height: 350px;
